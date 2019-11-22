@@ -1,0 +1,307 @@
+@font-face {
+    font-family: "Otaku Rant";
+    src: url('/font/Otaku_Rant.ttf');
+}
+
+@font-face {
+    font-family: "Mangat";
+    src: url('/font/mangat.ttf');
+}
+
+body {
+    margin: 0;
+    overflow: auto;
+}
+
+.header-title {
+    overflow: hidden;
+    padding: 20px, 10px;
+    text-align: center;
+    background-image: linear-gradient(to right, #85ebff, #85c6ff);
+}
+
+.header-title h1 {
+    font-family: "Mangat";
+    color: #363636;
+}
+
+.container {
+    position: relative;
+    padding: 50px 100px 50px 100px;
+}
+
+
+.row {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    grid-gap: 10px;
+    /* background-color: #2196F3; */
+    padding: 10px;
+    grid-auto-flow: row;
+}
+
+
+.col {
+    /* padding: 0 33px; */
+    padding: 20px 40px;
+    /* background-color: violet; */
+}
+
+
+.content {
+    font-family: "Mangat";
+    color: #363636;
+}
+
+.content-center {
+    text-align: center;
+    align-content: center;
+}
+
+
+.img-rounded {
+    border: solid #85c6ff;
+    border-radius: 100px;
+    height: 100px;
+    padding: 20px;
+    margin: 50px;
+    -webkit-animation: 2s;
+    transition: 0.3s;
+}
+
+.img-rounded-red {
+    border: solid #ff8585;
+    border-radius: 100px;
+    height: 100px;
+    padding: 20px;
+    margin: 50px;
+    -webkit-animation: 2s;
+    transition: 0.3s;
+}
+
+.img-rounded-green {
+    border: solid #8dff85;
+    border-radius: 100px;
+    height: 100px;
+    padding: 20px;
+    margin: 50px;
+    -webkit-animation: 2s;
+    transition: 0.3s;
+}
+
+
+
+.img-rounded-txt {
+    height: 23px;
+}
+
+
+.row>div:nth-child(3) p {
+    line-height: 35px;
+}
+
+hr {
+    background-image: linear-gradient(to left, #98eeff, #85c6ff);
+    height: 3px;
+    border: none;
+}
+
+.footer {
+    overflow: hidden;
+    /* padding: , 100%; */
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    background-image: linear-gradient(to left, #9defff, #85c6ff);
+}
+
+.footer p {
+    font-family: "Mangat";
+    color: #363636;
+}
+
+.btn {
+    display: inline-block;
+    margin: 10px;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    background-color: #85c6ff;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.btn-success {
+    display: inline-block;
+    margin: 10px;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    background-color: #8dff85;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.btn-delete {
+    display: inline-block;
+    margin: 10px;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    background-color: #ff8585;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.btn-delete:hover {
+    font-size: 40px;
+    margin-left: 0px;
+    border-radius: 40px;
+    padding: 15px 25px 15px 25px;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.btn-success:hover {
+    font-size: 40px;
+    margin-left: 0px;
+    border-radius: 40px;
+    padding: 15px 25px 15px 25px;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    font-size: 40px;
+    margin-left: 0px;
+    border-radius: 40px;
+    padding: 15px 25px 15px 25px;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.list-content {
+    list-style-type: none;
+}
+
+.list-content li {
+    padding-bottom: 30px;
+}
+
+.col-1 {
+    grid-column: span 1;
+}
+
+.col-2 {
+    grid-column: span 2;
+}
+
+.col-3 {
+    grid-column: span 3;
+}
+
+.content p {
+    font-family: "Mangat";
+    line-height: 30px;
+}
+
+.content-list li {
+    font-family: "Mangat";
+}
+
+.img-pick .img-rounded:hover {
+    height: 150px;
+    text-decoration: none;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.img-pick {
+    text-decoration: none;
+
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 70px;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: auto;
+}
+
+.modal-body {
+    padding: 20px;
+    background-color: white;
+    width: 80%;
+    margin: auto;
+}
+
+
+.grid-modal {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-auto-flow: column;
+}
+
+
+.modal-content {
+    padding: 20px;
+}
+
+.content-inline {
+    display: inline-flex;
+}
+
+@media screen and (max-width: 864px) {
+
+
+    .grid-modal>div {}
+
+    .modal .img-rounded {
+        height: 30px;
+        margin: unset;
+    }
+
+    .img-rounded {
+        margin: 10px 0 10px 0;
+    }
+
+    .modal .content {
+        font-size: 7px;
+    }
+
+    .modal .content-center {
+        align-content: unset;
+    }
+
+    .modal-content {
+        padding: 0;
+        margin: 0px;
+    }
+
+    .modal .btn {
+        display: inline-block;
+        padding: 5px 15px 5px 15px;
+        font-size: 15px;
+        margin: 6px;
+    }
+
+    .modal .btn:hover {
+        font-size: 20px;
+        margin-left: 0px;
+        border-radius: 40px;
+        padding: 10px 20px 10px 20px;
+        margin: 0px;
+    }
+
+}

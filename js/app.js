@@ -1,5 +1,6 @@
 var TagBody = document.getElementById("play-body");
 var modal = document.getElementById('modal');
+
 var HasilPlayer;
 var GetImagePlayer = ['image/hand.png', 'image/hand_rock.png', 'image/hand_scissors.png'];
 var ScoreCPU = 0;
@@ -50,7 +51,7 @@ function Result(Player, CPU) {
             break;
         case 1:
             if (CPU == 2) {
-                TampilHasil('Menang', ScorePlayer += 1, ScorePlayer);
+                TampilHasil('Menang', ScorePlayer += 1, ScoreCPU);
             } else {
                 TampilHasil('Kalah', ScorePlayer, ScoreCPU += 1);
             }
@@ -82,7 +83,7 @@ function CpuPlay() {
                     setTimeout(function () {
                         if (i < 3) {
                             Titik += '.';
-                            TampilHasil(Titik, ScorePlayer, ScoreCPU);
+                            document.getElementById("result").innerHTML = Titik;
                             if (Titik == '...') {
                                 Titik = '';
                             }

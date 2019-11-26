@@ -1,11 +1,21 @@
 @font-face {
-    font-family: "Otaku Rant";
-    src: url('/font/Otaku_Rant.ttf');
+    font-family: "big noodle title";
+    src: url('/font/big_noodle_titling.ttf')format('truetype');
 }
 
 @font-face {
-    font-family: "Mangat";
-    src: url('/font/mangat.ttf');
+    font-family: "ModernSans Light";
+    src: url("/font/ModernSans_Light.otf");
+}
+
+@font-face {
+    font-family: "Landasans Regular";
+    src: url("/font/Landasans_Regular.ttf");
+}
+
+@font-face {
+    font-family: "Vice City Sans";
+    src: url("/font/ViceCitySans.otf");
 }
 
 body {
@@ -15,13 +25,15 @@ body {
 
 .header-title {
     overflow: hidden;
-    padding: 20px, 10px;
+    padding: 10px, 20px;
+    margin: 0px;
     text-align: center;
     background-image: linear-gradient(to right, #85ebff, #85c6ff);
+    width: 100%;
 }
 
 .header-title h1 {
-    font-family: "Mangat";
+    font-family: "big noodle title";
     color: #363636;
 }
 
@@ -36,21 +48,18 @@ body {
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto;
     grid-gap: 10px;
-    /* background-color: #2196F3; */
     padding: 10px;
     grid-auto-flow: row;
 }
 
 
 .col {
-    /* padding: 0 33px; */
     padding: 20px 40px;
-    /* background-color: violet; */
 }
 
 
 .content {
-    font-family: "Mangat";
+    font-family: "ModernSans Light";
     color: #363636;
 }
 
@@ -118,26 +127,48 @@ hr {
 }
 
 .footer p {
-    font-family: "Mangat";
+    font-family: "Vice City Sans";
     color: #363636;
 }
 
-.btn {
+.btn-md {
     display: inline-block;
     margin: 10px;
     font-size: 30px;
     text-decoration: none;
     color: white;
-    padding: 10px 20px 10px 20px;
+    padding: 15px 25px 15px 25px;
     background-color: #85c6ff;
     border-radius: 30px;
     transition: 0.5s;
 }
 
+
+.btn {
+    display: inline-block;
+    margin: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    background-color: #85c6ff;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.btn-md:hover {
+    font-size: 40px;
+    margin-left: 0px;
+    border-radius: 40px;
+    padding: 20px 30px 20px 30px;
+    margin: 0px;
+    cursor: pointer;
+}
+
 .btn-success {
     display: inline-block;
     margin: 10px;
-    font-size: 30px;
+    font-size: 20px;
     text-decoration: none;
     color: white;
     padding: 10px 20px 10px 20px;
@@ -149,7 +180,7 @@ hr {
 .btn-delete {
     display: inline-block;
     margin: 10px;
-    font-size: 30px;
+    font-size: 20px;
     text-decoration: none;
     color: white;
     padding: 10px 20px 10px 20px;
@@ -159,7 +190,7 @@ hr {
 }
 
 .btn-delete:hover {
-    font-size: 40px;
+    font-size: 30px;
     margin-left: 0px;
     border-radius: 40px;
     padding: 15px 25px 15px 25px;
@@ -168,7 +199,7 @@ hr {
 }
 
 .btn-success:hover {
-    font-size: 40px;
+    font-size: 30px;
     margin-left: 0px;
     border-radius: 40px;
     padding: 15px 25px 15px 25px;
@@ -177,7 +208,7 @@ hr {
 }
 
 .btn:hover {
-    font-size: 40px;
+    font-size: 30px;
     margin-left: 0px;
     border-radius: 40px;
     padding: 15px 25px 15px 25px;
@@ -206,12 +237,13 @@ hr {
 }
 
 .content p {
-    font-family: "Mangat";
+    font-family: "ModernSans Light";
     line-height: 30px;
+    font-size: 20px;
 }
 
 .content-list li {
-    font-family: "Mangat";
+    font-family: "ModernSans Light";
 }
 
 .img-pick .img-rounded:hover {
@@ -262,10 +294,51 @@ hr {
     display: inline-flex;
 }
 
+.img-box {
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border: none;
+    height: 300px;
+}
+
 @media screen and (max-width: 864px) {
 
+    html {
+        width: min-content;
+    }
 
-    .grid-modal>div {}
+    .img-box {
+        margin-bottom: 20px;
+        border-radius: 20px;
+        border: none;
+        height: 200px;
+    }
+
+    .row {
+        display: grid;
+        grid-template-rows: auto;
+        grid-gap: 10px;
+        padding: 10px;
+        grid-auto-flow: row;
+    }
+
+    .col {
+        padding: 10px 20px;
+
+    }
+
+    .col-1 {
+        grid-column: 1;
+    }
+
+    .col-2 {
+        grid-column: 1;
+    }
+
+    .col-3 {
+        grid-column: 1;
+    }
+
 
     .modal .img-rounded {
         height: 30px;
@@ -273,7 +346,7 @@ hr {
     }
 
     .img-rounded {
-        margin: 10px 0 10px 0;
+        margin: 10px 20px 10px 20px;
     }
 
     .modal .content {
@@ -304,4 +377,32 @@ hr {
         margin: 0px;
     }
 
+    .container {
+        position: relative;
+        padding: 5px 5px;
+    }
+
+    .content p {
+        font-family: "ModernSans Light";
+        line-height: 20px;
+        font-size: 17px;
+    }
+
+    .content h1 {
+        font-family: "ModernSans Light";
+        font-size: 25px;
+    }
+
+    .btn-md {
+        display: block;
+        margin: 10px;
+        font-size: 20px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        padding: 10px 20px 10px 20px;
+        background-color: #85c6ff;
+        border-radius: 30px;
+        transition: 0.5s;
+    }
 }

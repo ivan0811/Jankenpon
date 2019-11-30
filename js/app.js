@@ -1,10 +1,16 @@
-var TagBody = document.getElementById("play-body");
+var TagBody = document.getElementById("play_body");
 var modal = document.getElementById('modal');
 
 var HasilPlayer;
 var GetImagePlayer = ['image/hand.png', 'image/hand_rock.png', 'image/hand_scissors.png'];
 var ScoreCPU = 0;
 var ScorePlayer = 0;
+
+var container = document.getElementById("container");
+
+if (container.offsetHeight >= 550) {
+    TagBody.style.paddingBottom = "6rem";
+}
 
 function ulangi() {
     ScoreCPU = 0;
@@ -98,5 +104,4 @@ function CpuPlay() {
     setTimeout(function () {
         Result(HasilPlayer, CpuPick);
     }, 2700);
-
 }
